@@ -1,0 +1,76 @@
+#container_app{
+	width: 500px;
+	border: 1px solid black;
+	margin: auto;
+	margin-top: 10%;
+	text-align: center;
+	position: relative;
+
+}
+#div_plansza{
+	width: 450px;
+	height: 200px;
+	border: 1px solid black;
+	margin: auto;
+	position: relative;
+}
+#button_start{
+	margin: 10px 0 10px 0;
+}
+#div_wynik{
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+#div_postac{
+	width: 20px;
+	height: 30px;
+	background: green;
+	position: relative;
+	top: 170px;
+
+}
+#div_klocek{
+	width: 10px;
+	height: 20px;
+	background: red;
+	position: absolute;
+	top: 180px;
+	left: 430px;
+	animation:anim1 2.5s infinite linear;
+}
+#div_klocek_gora{
+	width: 20px;
+	height: 10px;
+	background: blue;
+	position: absolute;
+	top: 100px;
+	left: 430px;
+	animation:anim2 2.5s infinite linear;
+}
+@keyframes anim1{
+	0%{left: 440px;}
+	97%{left: 0px; width: 10px}
+	100%{left: 0px; width: 0px}
+}
+@keyframes anim2{
+	0%{left: 440px; width: 20px}
+	95%{left: 0px; width: 20px}
+	100%{left: 0px; width: 0px}
+}
+@keyframes skok{
+	0%{top: 170px;}
+	40%{top: 70px;}
+	50%{top: 65px;}
+	60%{top: 70px;}
+	100%{top: 170px;}
+}
+.skok {
+	animation: skok 0.7s linear;
+}
+.ukryty{
+	display: none;
+}
+.smierc{
+	display: inline-block;
+}
