@@ -1,54 +1,103 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Jumper</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
-<div id="container_app" class="card">
-	<div class="card-header">
-	<p class="mb-0">Jumper</p>
-	</div>
-<div class="card-body">
-	<p id="div_najlepszy" >Najlepszy Wynik:<span id="span_najlepszy">0</span></p>
-	<div id="div_plansza">
-		<div id="div_wynik">Wynik:<span id="span_wynik">0</span></div>
-		<div id="div_postac"></div>
-		<div id="div_klocek" class="ukryty"></div>
-		<div id="div_klocek_gora" class="ukryty"></div>
-	</div>
-	<button id="button_start" class="btn btn-success">Rozpocznij</button>
-	<button id="button_skok" class="btn btn-warning" disabled>Skok</button>
-</div>
-	<div class="card-footer">
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#info">Informacje o aplikacji</button>
-	</div>	
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jumper</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" sizes="76x76" href="src/skakacz.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/skakacz.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/skakacz.png" />
+    <link rel="manifest" href="src/skakacz.png" />
+    <link rel="mask-icon" href="src/skakacz.png" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div id="container_app" class="card">
+      <div class="card-header">
+        <p class="mb-0">Jumper</p>
+      </div>
+      <div class="card-body">
+        <p id="div_najlepszy">
+          Najlepszy Wynik:<span id="span_najlepszy">0</span>
+        </p>
+        <div id="div_plansza">
+          <div id="div_wynik">Wynik:<span id="span_wynik">0</span></div>
+          <div id="div_postac" class="bieg"></div>
+          <div id="div_klocek" class="ukryty"></div>
+          <div id="div_klocek_gora" class="ukryty"></div>
+        </div>
+        <button id="button_start" class="btn btn-success">Rozpocznij</button>
+        <button id="button_skok" class="btn btn-warning" disabled>Skok</button>
+      </div>
+      <div class="card-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#info"
+        >
+          Informacje o aplikacji
+        </button>
+      </div>
+    </div>
 
-</div>
-
-<div class="modal fade" id="info" tabindex="-1" aria-labelledby="infoinfo" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h1 class="modal-title fs-5" id="infoinfo">Informacje o aplikacji</h1>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-		  <h5 class="mb-2">O aplikacji</h5>
-			Aplikacja plansze po której porusza się czerwony klocek i od odpowiedniej ilości punktów klocek niebieski. Na planszy użytkownik ma możliwość sterować klockiem zielonym za pomocą przycisku "Skok". Zadaniem użytkownika jest jak najdłużej unikać klocka czerwonego i niebieskiego. Z każdą sekundą użytkownik dostaje punkty, które zapisują się na środku ekranu. Po zetknięciu glocka zielonego z którymkolwiek innym, gra konczy się i zaczyna od nowa.
-			<h5 class="mt-2">Technologie</h5>
-			HTML, CSS, JavaScript, Bootstrap
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zamknij</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-<script type="text/javascript" src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+    <div
+      class="modal fade"
+      id="info"
+      tabindex="-1"
+      aria-labelledby="infoinfo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="infoinfo">
+              Informacje o aplikacji
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-2">O aplikacji</h5>
+            Aplikacja prezentuje planszę, na której porusza się przeszkoda, a po
+            zdobyciu odpowiedniej ilości punktów - również przeszkoda w
+            powietrzu. Użytkownik ma możliwość sterowania postacią, korzystając
+            z przycisku "Skok". Celem gracza jest unikanie przeszkód jak
+            najdłużej, zdobywając punkty z każdą sekundą. Aktualna liczba
+            punktów wyświetlana jest na środku ekranu. W przypadku zetknięcia
+            się z przeszkodą, gra kończy się i rozpoczyna od nowa.
+            <h5 class="mt-2">Technologie</h5>
+            HTML, CSS, JavaScript, Bootstrap
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Zamknij
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

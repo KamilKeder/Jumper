@@ -11,15 +11,19 @@ var ptak;
 button_skok.addEventListener("click",skok);
 function skok(){
 	if(div_postac.classList != "skok"){
+		div_postac.classList.remove("bieg");
 		div_postac.classList.add("skok");
 		button_skok.disabled = true;
 	timeout_skok = setTimeout(function(){
 		div_postac.classList.remove("skok");
+		div_postac.classList.add("bieg");
 		button_skok.disabled = false;
 	},700)
+
 }
 }
 button_start.addEventListener("click", function(){
+	div_postac.classList.add("bieg");
 	span_wynik.innerHTML = 0;
 	div_klocek.classList.remove("ukryty");
 	div_postac.classList.remove("smierc");
